@@ -33,12 +33,14 @@ const formats=[
 const records=[];
 for(const sample of formats){
   const extracted=await call("/api/extract",sample);
-  if(extracted.status!=="READY_TO_VERIFY")throw new Error(`${sample.name} did not extract cleanly.`);
+  if(extracted.status!=="READY_TO_VERIFY")throw new Error(`${sample.name} did not extract cleanly: ${JSON.stringify(extracted)}`);
   const verified=await call("/api/verify",sample);
   if(verified.verification?.status!=="VERIFIED"||verified.verification?.chainId!==1672||verified.verification?.accountType!=="EOA")throw new Error(`${sample.name} live EOA verification failed.`);
   const prepared=await call("/api/prepare",{...sample,confirmation});
   const record=prepared.record;
   if(record.transaction?.broadcast!==false||record.transaction?.unsigned!==true)throw new Error(`${sample.name} was not explicitly unsigned.`);
+  if(record.transaction.transaction.to!==record.canonical.payee)throw new Error(`${sample.name} recipient did not round-trip.`);
+  if(record.transaction.transaction.chainId!==record.canonical.chainId||record.transaction.transaction.chainId!==1672)throw new Error(`${sample.name} chain ID did not round-trip.`);
   if(decodeReference(record.transaction.transaction.data)!==record.canonical.reference)throw new Error(`${sample.name} reference round-trip failed.`);
   if(BigInt(record.transaction.transaction.value).toString()!==record.canonical.amountRaw)throw new Error(`${sample.name} amount round-trip failed.`);
   const replay=await call("/api/prepare",{...sample,confirmation});
@@ -46,7 +48,7 @@ for(const sample of formats){
   const tx=(await request(`/api/records/${record.id}/transaction.json`,{headers})).value;
   const markdown=(await request(`/api/records/${record.id}/summary.md`,{headers})).value;
   if(tx.transaction?.data!==record.transaction.transaction.data||!markdown.includes(record.canonical.reference)||!markdown.includes("NOT BROADCAST"))throw new Error(`${sample.name} export mismatch.`);
-  const sanitized={...record};delete sanitized.workspaceId;
+  const sanitized={...record};delete sanitized.workspaceId;delete sanitized.workspace_id;
   await fs.writeFile(path.join(out,`${sample.name}-record.json`),JSON.stringify(sanitized,null,2)+"\n");
   await fs.writeFile(path.join(out,`${sample.name}-unsigned-transaction.json`),JSON.stringify(tx,null,2)+"\n");
   await fs.writeFile(path.join(out,`${sample.name}-summary.md`),markdown);

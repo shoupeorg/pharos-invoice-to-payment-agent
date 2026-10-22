@@ -1,0 +1,27 @@
+{
+  "engineVersion": "invoice-to-payment/1.0.0",
+  "capturedAt": "2026-10-22T15:32:57.206Z",
+  "demoUrl": "https://pharos-invoice-to-payment-agent.shoupeorg.workers.dev",
+  "preparationOnly": true,
+  "transactionsBroadcast": 0,
+  "records": [
+    {
+      "name": "plain-text",
+      "id": "178fca8c-1cfb-4bdf-8f85-7b2b748744c5",
+      "reference": "PH-2026-1001",
+      "record": "/evidence/v1.0/plain-text-record.json",
+      "transaction": "/evidence/v1.0/plain-text-unsigned-transaction.json",
+      "summary": "/evidence/v1.0/plain-text-summary.md"
+    },
+    {
+      "name": "structured-json",
+      "id": "3217180b-1c3e-4012-8c68-04f00b95677d",
+      "reference": "PH-2026-1002",
+      "record": "/evidence/v1.0/structured-json-record.json",
+      "transaction": "/evidence/v1.0/structured-json-unsigned-transaction.json",
+      "summary": "/evidence/v1.0/structured-json-summary.md"
+    }
+  ],
+  "mismatch": "/evidence/v1.0/mismatch-result.json",
+  "missing": "/evidence/v1.0/missing-field-result.json"
+}

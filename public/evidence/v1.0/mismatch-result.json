@@ -1,0 +1,143 @@
+{
+  "format": "text",
+  "canonical": {
+    "reference": "PH-2026-1001",
+    "payee": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+    "amount": "0.0001",
+    "amountRaw": "100000000000000",
+    "assetId": "native:1672",
+    "tokenLabel": "PROS",
+    "chainId": 1672,
+    "payer": "0x15ddce897d76ac39c188ade4d353711a60395315",
+    "network": "Pharos Pacific Mainnet",
+    "issuer": "Example Infrastructure Cooperative",
+    "dueDate": "2026-11-01"
+  },
+  "provenance": {
+    "reference": {
+      "value": "PH-2026-1001",
+      "original": "PH-2026-1001",
+      "source": {
+        "kind": "text",
+        "excerpt": "Invoice Reference: PH-2026-1001",
+        "start": 0,
+        "end": 31
+      }
+    },
+    "payee": {
+      "value": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+      "original": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+      "source": {
+        "kind": "text",
+        "excerpt": "Payee: 0x4ffd9c7e8641947662a43af298b734ca93530002",
+        "start": 75,
+        "end": 124
+      }
+    },
+    "amount": {
+      "value": "0.0001",
+      "original": "0.0001",
+      "source": {
+        "kind": "text",
+        "excerpt": "Amount: 0.0001",
+        "start": 125,
+        "end": 139
+      }
+    },
+    "assetId": {
+      "value": "native:1672",
+      "original": "native:1672",
+      "source": {
+        "kind": "text",
+        "excerpt": "Asset: native:1672",
+        "start": 140,
+        "end": 158
+      }
+    },
+    "tokenLabel": {
+      "value": "PROS",
+      "original": "PROS",
+      "source": {
+        "kind": "text",
+        "excerpt": "Currency: PROS",
+        "start": 159,
+        "end": 173
+      }
+    },
+    "chainId": {
+      "value": "1672",
+      "original": "1672",
+      "source": {
+        "kind": "text",
+        "excerpt": "Chain ID: 1672",
+        "start": 206,
+        "end": 220
+      }
+    },
+    "network": {
+      "value": "Pharos Pacific Mainnet",
+      "original": "Pharos Pacific Mainnet",
+      "source": {
+        "kind": "text",
+        "excerpt": "Network: Pharos Pacific Mainnet",
+        "start": 174,
+        "end": 205
+      }
+    },
+    "payer": {
+      "value": "0x15ddce897d76ac39c188ade4d353711a60395315",
+      "original": "0x15ddce897d76ac39c188ade4d353711a60395315",
+      "source": {
+        "kind": "text",
+        "excerpt": "Payer: 0x15ddce897d76ac39c188ade4d353711a60395315",
+        "start": 221,
+        "end": 270
+      }
+    },
+    "issuer": {
+      "value": "Example Infrastructure Cooperative",
+      "original": "Example Infrastructure Cooperative",
+      "source": {
+        "kind": "text",
+        "excerpt": "Issuer: Example Infrastructure Cooperative",
+        "start": 32,
+        "end": 74
+      }
+    },
+    "dueDate": {
+      "value": "2026-11-01",
+      "original": "2026-11-01",
+      "source": {
+        "kind": "text",
+        "excerpt": "Due Date: 2026-11-01",
+        "start": 271,
+        "end": 291
+      }
+    }
+  },
+  "issues": [],
+  "status": "BLOCKED",
+  "comparison": [
+    {
+      "code": "EXPECTED_REFERENCE_MISMATCH",
+      "field": "reference",
+      "message": "Invoice reference PH-2026-1001 differs from expected OTHER-REF.",
+      "invoiceValue": "PH-2026-1001",
+      "expectedValue": "OTHER-REF"
+    },
+    {
+      "code": "EXPECTED_PAYEE_MISMATCH",
+      "field": "payee",
+      "message": "Invoice payee 0x4ffd9c7e8641947662a43af298b734ca93530002 differs from expected 0x0000000000000000000000000000000000000001.",
+      "invoiceValue": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+      "expectedValue": "0x0000000000000000000000000000000000000001"
+    },
+    {
+      "code": "EXPECTED_AMOUNT_MISMATCH",
+      "field": "amount",
+      "message": "Invoice amount 0.0001 differs from expected 0.0002.",
+      "invoiceValue": "0.0001",
+      "expectedValue": "0.0002"
+    }
+  ]
+}

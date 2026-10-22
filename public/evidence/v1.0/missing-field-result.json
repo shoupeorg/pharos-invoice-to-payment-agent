@@ -1,0 +1,87 @@
+{
+  "format": "text",
+  "canonical": {
+    "reference": "PH-2026-MISSING",
+    "payee": null,
+    "amount": "0.0001",
+    "amountRaw": "100000000000000",
+    "assetId": "native:1672",
+    "tokenLabel": "PROS",
+    "chainId": 1672,
+    "payer": null,
+    "network": "Pharos Pacific Mainnet",
+    "issuer": null,
+    "dueDate": null
+  },
+  "provenance": {
+    "reference": {
+      "value": "PH-2026-MISSING",
+      "original": "PH-2026-MISSING",
+      "source": {
+        "kind": "text",
+        "excerpt": "Invoice Reference: PH-2026-MISSING",
+        "start": 0,
+        "end": 34
+      }
+    },
+    "amount": {
+      "value": "0.0001",
+      "original": "0.0001",
+      "source": {
+        "kind": "text",
+        "excerpt": "Amount: 0.0001",
+        "start": 35,
+        "end": 49
+      }
+    },
+    "assetId": {
+      "value": "native:1672",
+      "original": "native:1672",
+      "source": {
+        "kind": "text",
+        "excerpt": "Asset: native:1672",
+        "start": 50,
+        "end": 68
+      }
+    },
+    "tokenLabel": {
+      "value": "PROS",
+      "original": "PROS",
+      "source": {
+        "kind": "text",
+        "excerpt": "Currency: PROS",
+        "start": 69,
+        "end": 83
+      }
+    },
+    "chainId": {
+      "value": "1672",
+      "original": "1672",
+      "source": {
+        "kind": "text",
+        "excerpt": "Chain ID: 1672",
+        "start": 116,
+        "end": 130
+      }
+    },
+    "network": {
+      "value": "Pharos Pacific Mainnet",
+      "original": "Pharos Pacific Mainnet",
+      "source": {
+        "kind": "text",
+        "excerpt": "Network: Pharos Pacific Mainnet",
+        "start": 84,
+        "end": 115
+      }
+    }
+  },
+  "issues": [
+    {
+      "code": "MISSING_PAYEE",
+      "field": "payee",
+      "message": "Required field payee is missing."
+    }
+  ],
+  "status": "BLOCKED",
+  "comparison": []
+}

@@ -1,8 +1,9 @@
-{
+﻿{
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pharos-invoice-to-payment-agent",
   "main": "worker.js",
   "compatibility_date": "2026-10-19",
   "assets": { "directory": "./public", "binding": "ASSETS" },
-  "d1_databases": [{ "binding": "DB", "database_name": "pharos-invoice-to-payment-agent", "database_id": "REPLACE_D1_DATABASE_ID", "migrations_dir": "migrations" }]
+  "d1_databases": [{ "binding": "DB", "database_name": "pharos-invoice-to-payment-agent", "database_id": "43f9e332-cba7-4341-b855-c102638766db", "migrations_dir": "migrations" }]
 }
+

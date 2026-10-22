@@ -1,0 +1,94 @@
+{
+  "id": "3217180b-1c3e-4012-8c68-04f00b95677d",
+  "fingerprint": "fa3d6b3c063ebdce26de284bda1954a5c48a4f1a5a96a53a015bef04670d4d76",
+  "source_format": "json",
+  "canonical": {
+    "reference": "PH-2026-1002",
+    "payee": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+    "amount": "0.0002",
+    "amountRaw": "200000000000000",
+    "assetId": "native:1672",
+    "tokenLabel": "PROS",
+    "chainId": 1672,
+    "payer": "0x15ddce897d76ac39c188ade4d353711a60395315",
+    "network": "Pharos Pacific Mainnet",
+    "issuer": "Example Data Services",
+    "dueDate": "2026-11-05"
+  },
+  "verification": {
+    "status": "VERIFIED",
+    "network": "Pharos",
+    "chainId": 1672,
+    "blockNumber": "20941642",
+    "recipient": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+    "accountType": "EOA",
+    "bytecode": "0x",
+    "gasEstimate": "28962",
+    "gasLimitation": null,
+    "fees": {
+      "gasPriceWei": "10000000000",
+      "gasPriceGwei": "10",
+      "gasPriceHex": "0x2540be400",
+      "maxPriorityFeePerGasWei": "0",
+      "maxPriorityFeePerGasGwei": "0",
+      "maxPriorityFeePerGasHex": "0x0"
+    },
+    "mcpEndpoint": "https://mcp.pharos.xyz/mcp",
+    "tools": [
+      "get_chain_info",
+      "get_code",
+      "estimate_gas",
+      "get_gas_price"
+    ]
+  },
+  "transaction_json": "{\"status\":\"PREPARED_UNSIGNED\",\"unsigned\":true,\"broadcast\":false,\"transaction\":{\"chainId\":1672,\"to\":\"0x4ffd9c7e8641947662a43af298b734ca93530002\",\"value\":\"0xb5e620f48000\",\"data\":\"0x504841524f532d494e564f4943452f313a50482d323032362d31303032\",\"from\":\"0x15ddce897d76ac39c188ade4d353711a60395315\",\"gas\":\"28962\"},\"decoded\":{\"recipient\":\"0x4ffd9c7e8641947662a43af298b734ca93530002\",\"amountRaw\":\"200000000000000\",\"reference\":\"PH-2026-1002\",\"chainId\":1672},\"generatedAt\":\"2026-10-22T15:32:53.538Z\",\"verificationBlock\":\"20941642\",\"verification\":{\"status\":\"VERIFIED\",\"network\":\"Pharos\",\"chainId\":1672,\"blockNumber\":\"20941642\",\"recipient\":\"0x4ffd9c7e8641947662a43af298b734ca93530002\",\"accountType\":\"EOA\",\"bytecode\":\"0x\",\"gasEstimate\":\"28962\",\"gasLimitation\":null,\"fees\":{\"gasPriceWei\":\"10000000000\",\"gasPriceGwei\":\"10\",\"gasPriceHex\":\"0x2540be400\",\"maxPriorityFeePerGasWei\":\"0\",\"maxPriorityFeePerGasGwei\":\"0\",\"maxPriorityFeePerGasHex\":\"0x0\"},\"mcpEndpoint\":\"https://mcp.pharos.xyz/mcp\",\"tools\":[\"get_chain_info\",\"get_code\",\"estimate_gas\",\"get_gas_price\"]}}",
+  "summary_markdown": "# UNSIGNED payment preparation\n\n**Status:** PREPARED UNSIGNED / NOT BROADCAST\n\n- Source format: json\n- Invoice reference: PH-2026-1002\n- Payee: 0x4ffd9c7e8641947662a43af298b734ca93530002\n- Amount: 0.0002 PROS (200000000000000 atomic units)\n- Asset: native:1672\n- Network: Pharos Pacific Mainnet (chain 1672)\n- Generated at: 2026-10-22T15:32:53.538Z\n- Verification block: 20941642\n- Verification endpoint: https://mcp.pharos.xyz/mcp\n- Verification tools: get_chain_info, get_code, estimate_gas, get_gas_price\n- Recipient account type: EOA\n- Gas estimate: 28962\n- Gas limitation: None reported\n- Transaction data: 0x504841524f532d494e564f4943452f313a50482d323032362d31303032\n- Decoded reference: PH-2026-1002\n\nThis file is preparation-only. It contains no signature and no payment was broadcast.\n",
+  "created_at": "2026-10-22T15:32:53.538Z",
+  "transaction": {
+    "status": "PREPARED_UNSIGNED",
+    "unsigned": true,
+    "broadcast": false,
+    "transaction": {
+      "chainId": 1672,
+      "to": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+      "value": "0xb5e620f48000",
+      "data": "0x504841524f532d494e564f4943452f313a50482d323032362d31303032",
+      "from": "0x15ddce897d76ac39c188ade4d353711a60395315",
+      "gas": "28962"
+    },
+    "decoded": {
+      "recipient": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+      "amountRaw": "200000000000000",
+      "reference": "PH-2026-1002",
+      "chainId": 1672
+    },
+    "generatedAt": "2026-10-22T15:32:53.538Z",
+    "verificationBlock": "20941642",
+    "verification": {
+      "status": "VERIFIED",
+      "network": "Pharos",
+      "chainId": 1672,
+      "blockNumber": "20941642",
+      "recipient": "0x4ffd9c7e8641947662a43af298b734ca93530002",
+      "accountType": "EOA",
+      "bytecode": "0x",
+      "gasEstimate": "28962",
+      "gasLimitation": null,
+      "fees": {
+        "gasPriceWei": "10000000000",
+        "gasPriceGwei": "10",
+        "gasPriceHex": "0x2540be400",
+        "maxPriorityFeePerGasWei": "0",
+        "maxPriorityFeePerGasGwei": "0",
+        "maxPriorityFeePerGasHex": "0x0"
+      },
+      "mcpEndpoint": "https://mcp.pharos.xyz/mcp",
+      "tools": [
+        "get_chain_info",
+        "get_code",
+        "estimate_gas",
+        "get_gas_price"
+      ]
+    }
+  }
+}
