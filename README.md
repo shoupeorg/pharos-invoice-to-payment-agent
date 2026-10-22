@@ -12,6 +12,8 @@ An evidence-backed invoice reconciliation desk that deterministically extracts i
 
 Both normalize to invoice reference, payee, exact decimal amount, asset ID, token label, chain ID, network, and optional payer/issuer/due date. Every value retains its text excerpt/span or JSON property path. Missing, conflicting, ambiguous, malformed, unsupported, zero, or out-of-range values block preparation.
 
+Structured-JSON amounts must be decimal strings; JSON numeric values are rejected before normalization because `JSON.parse` may already have rounded them. Network names are matched exactly after case, whitespace, underscore, and hyphen normalization. Supported aliases are `Pharos Pacific Mainnet`, `Pharos Pacific`, and `Pacific Mainnet`; embedded or conflicting names such as `Not Pharos` and `Pharos Atlantic` are blocked.
+
 The optional expected-payment JSON is a reconciliation check, not an automatic correction mechanism. Differences show invoice value versus expected value and block preparation. To correct an invoice, edit the source explicitly; the displayed original source, new extraction, and a fresh human confirmation make the final value auditable. Conflicting source values are never silently repaired.
 
 ## Supported payment route
