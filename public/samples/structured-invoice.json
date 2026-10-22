@@ -1,0 +1,7 @@
+{
+  "invoiceReference": "PH-2026-1002",
+  "issuer": { "name": "Example Data Services" },
+  "payment": { "payee": "0x4ffd9c7e8641947662a43af298b734ca93530002", "amount": "0.0002", "assetId": "native:1672", "tokenLabel": "PROS", "chainId": 1672, "payer": "0x15ddce897d76ac39c188ade4d353711a60395315" },
+  "networkName": "Pharos Pacific Mainnet",
+  "dueDate": "2026-11-05"
+}

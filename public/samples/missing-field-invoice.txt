@@ -1,0 +1,6 @@
+Invoice Reference: PH-2026-MISSING
+Amount: 0.0001
+Asset: native:1672
+Currency: PROS
+Network: Pharos Pacific Mainnet
+Chain ID: 1672
