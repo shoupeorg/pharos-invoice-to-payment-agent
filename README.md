@@ -2,12 +2,17 @@
 
 An evidence-backed invoice reconciliation desk that deterministically extracts invoices, exposes field provenance and mismatches, verifies native-payment facts through the official Pharos MCP, requires human review, and produces an unsigned transaction. It never connects a wallet, signs, broadcasts, or claims payment completion.
 
+- Public demo: <https://pharos-invoice-to-payment-agent.shoupeorg.workers.dev>
+- Versioned public evidence: <https://pharos-invoice-to-payment-agent.shoupeorg.workers.dev/evidence/v1.0/manifest.json>
+
 ## Supported inputs
 
 - Plain-text labeled invoices with documented label aliases and arbitrary field order.
 - Structured JSON using the sample schema and documented alternate property paths.
 
 Both normalize to invoice reference, payee, exact decimal amount, asset ID, token label, chain ID, network, and optional payer/issuer/due date. Every value retains its text excerpt/span or JSON property path. Missing, conflicting, ambiguous, malformed, unsupported, zero, or out-of-range values block preparation.
+
+The optional expected-payment JSON is a reconciliation check, not an automatic correction mechanism. Differences show invoice value versus expected value and block preparation. To correct an invoice, edit the source explicitly; the displayed original source, new extraction, and a fresh human confirmation make the final value auditable. Conflicting source values are never silently repaired.
 
 ## Supported payment route
 
@@ -31,6 +36,13 @@ npm test
 npm run build
 npm run cli -- public/samples/plain-text-invoice.txt text
 ```
+
+## Samples and evidence
+
+- [`public/samples/plain-text-invoice.txt`](public/samples/plain-text-invoice.txt)
+- [`public/samples/structured-invoice.json`](public/samples/structured-invoice.json)
+- [`public/samples/missing-field-invoice.txt`](public/samples/missing-field-invoice.txt)
+- `public/evidence/v1.0/` is generated only from the public samples through the deployed API. It contains two prepared unsigned records and their exact exports plus blocked mismatch and missing-field results. No private workspace capability is published.
 
 ## API
 
